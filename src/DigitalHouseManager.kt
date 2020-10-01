@@ -26,10 +26,20 @@ class DigitalHouseManager {
     }
 
     fun excluirCurso(codigo: Int) {
-        if (cursos.remove(obterCursoPorCodigo(codigo)))
+        obterCursoPorCodigo(codigo)?.let {
+            val matriculasAtivas = matriculas.filter { matricula -> matricula.curso == it }
+
+            if (matriculasAtivas.isNotEmpty()) {
+                println("Alerta: Serão desativadas `${matriculasAtivas.size}` matrículas desse curso")
+                matriculasAtivas.forEach(Matricula::desativarMatricula)
+            }
+
+            this.cursos.remove(it)
             println("O curso com código `$codigo` foi removido com sucesso!")
-        else
-            println("Erro: O curso não está presente na lista de cursos!")
+            return
+        }
+
+        println("Erro: O curso não está presente na lista de cursos!")
     }
 
     fun exibirTodosCursos() {
