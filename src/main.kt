@@ -192,6 +192,12 @@ fun testeSucesso() {
     manager.excluirProfessor(1)
     manager.exibirTodosProfessores()
     println("***")
+
+    println("Exclusão de um curso com matrículas ativas:")
+    manager.exibirTodosCursos()
+    manager.exibirTodasMatriculas()
+    manager.excluirCurso(2)
+    println("***")
 }
 
 fun main() {
