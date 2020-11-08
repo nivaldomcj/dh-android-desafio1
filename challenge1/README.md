@@ -1,6 +1,6 @@
 ## Sobre
 
-Exercício _Desafio Kotlin_ desenvolvido no Curso Santander Coders Mobile da Digital House.
+Exercício _Desafio Kotlin_ desenvolvido no Curso Santander Coders Mobile da Digital House. 
 
 - Documentação com Diagrama de Classes (na pasta `uml`)
 - Desenvolvimento na linguagem Kotlin (na pasta `src`)
