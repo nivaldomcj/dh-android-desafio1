@@ -4,6 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="12dp"
     tools:context=".LoginActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        style="@style/defaultTextInputLayout"
+        android:hint="@string/email"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/defaultTextInputEditText"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        style="@style/defaultTextInputLayout"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/defaultTextInputEditText"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_authenticate"
+        style="@style/loginAuthenticateButton"
+        android:text="@string/authenticate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_password" />
+
+    <View
+        android:id="@+id/vw_left_or"
+        style="@style/loginOptionSeparatorView"
+        app:layout_constraintBottom_toTopOf="@id/btn_register"
+        app:layout_constraintEnd_toStartOf="@id/tv_or"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_authenticate" />
+
+    <TextView
+        android:id="@+id/tv_or"
+        style="@style/loginOptionText"
+        android:text="@string/or"
+        app:layout_constraintBottom_toTopOf="@id/btn_register"
+        app:layout_constraintEnd_toStartOf="@id/vw_right_or"
+        app:layout_constraintStart_toEndOf="@id/vw_left_or"
+        app:layout_constraintTop_toBottomOf="@id/btn_authenticate" />
+
+    <View
+        android:id="@+id/vw_right_or"
+        style="@style/loginOptionSeparatorView"
+        app:layout_constraintBottom_toTopOf="@id/btn_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_or"
+        app:layout_constraintTop_toBottomOf="@+id/btn_authenticate" />
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/loginRegisterButton"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_or" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

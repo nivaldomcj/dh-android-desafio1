@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">DigitalHouseFoods</string>
+    <string name="app_name">Digital House Foods</string>
     <string name="splash_screen">Splash Screen</string>
-    <string name="tv_splash_loading">Loading application…</string>
+    <string name="loading_application">Loading application…</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="authenticate">log in</string>
+    <string name="or">OR</string>
+    <string name="register">register</string>
 </resources>

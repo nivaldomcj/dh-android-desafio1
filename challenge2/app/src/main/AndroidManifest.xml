@@ -13,14 +13,15 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+        </activity>
+
+        <!-- Secondary Activities -->
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Secondary Activities -->
-        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
