@@ -5,7 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/form_margin"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name"
+        style="@style/defaultTextInputLayout"
+        android:hint="@string/name"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/defaultTextInputEditText"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_email"
@@ -14,7 +29,7 @@
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/til_name">
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/defaultTextInputEditText"
@@ -37,45 +52,29 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btn_authenticate"
-        style="@style/defaultFormActionButton"
-        android:text="@string/authenticate"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password_repeat"
+        style="@style/defaultTextInputLayout"
+        android:hint="@string/repeat_password"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_password" />
+        app:layout_constraintTop_toBottomOf="@id/til_password">
 
-    <View
-        android:id="@+id/vw_left_or"
-        style="@style/loginOptionSeparatorView"
-        app:layout_constraintBottom_toTopOf="@id/btn_register"
-        app:layout_constraintEnd_toStartOf="@id/tv_or"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_authenticate" />
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/defaultTextInputEditText"
+            android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/tv_or"
-        style="@style/loginOptionText"
-        android:text="@string/or"
-        app:layout_constraintBottom_toTopOf="@id/btn_register"
-        app:layout_constraintEnd_toStartOf="@id/vw_right_or"
-        app:layout_constraintStart_toEndOf="@id/vw_left_or"
-        app:layout_constraintTop_toBottomOf="@id/btn_authenticate" />
-
-    <View
-        android:id="@+id/vw_right_or"
-        style="@style/loginOptionSeparatorView"
-        app:layout_constraintBottom_toTopOf="@id/btn_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_or"
-        app:layout_constraintTop_toBottomOf="@+id/btn_authenticate" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_register"
-        style="@style/defaultFormCancelButton"
+        style="@style/defaultFormActionButton"
         android:text="@string/register"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_or" />
+        app:layout_constraintTop_toBottomOf="@id/til_password_repeat"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,22 +44,23 @@
         <item name="android:textColor">@color/indigo_500</item>
     </style>
 
-    <!-- Login -->
-    <style name="loginDefaultButton">
+    <!-- Form -->
+    <style name="defaultFormButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">68dp</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="loginAuthenticateButton" parent="loginDefaultButton">
+    <style name="defaultFormActionButton" parent="defaultFormButton">
         <item name="android:layout_marginTop">64dp</item>
         <item name="backgroundTint">@color/red_a200</item>
     </style>
 
-    <style name="loginRegisterButton" parent="loginDefaultButton">
+    <style name="defaultFormCancelButton" parent="defaultFormButton">
         <item name="backgroundTint">@color/indigo_200</item>
     </style>
 
+    <!-- Login -->
     <style name="loginOptionSeparatorView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">1dp</item>
