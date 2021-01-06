@@ -7,7 +7,7 @@ Exercício _Desafio Kotlin_ desenvolvido no Curso Santander Coders Mobile da Dig
 
 ## Diagrama
 
-<img src="/challenge1/uml/desafio.png">
+<img src="/uml/desafio.png">
 
 ## Executando
 
